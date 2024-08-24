@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="amis-sdk/sdk.css"/>
+  <link rel="stylesheet" href="amis-sdk/helper.css"/>
+  <link rel="stylesheet" href="amis-sdk/iconfont.css"/>
+  <title>amis hello world</title>
+</head>
+<body>
+<div id="root" class="app-wrapper"></div>
+<script src="amis-sdk/sdk.js"></script>
+<script>
+  let amis = amisRequire('amis/embed');
+  amis.embed('#root', {
+    type: 'page',
+    body: [
+      {type: 'wrapper', body: "Hello World!"},
+      {type: 'wrapper', body: "Welcome to amis!"},
+      {type: 'wrapper', body: {type: 'button', label: 'layout1', actionType: 'url', url: 'layout1.html', level: 'primary'}},
+      {type: 'wrapper', body: {type: 'button', label: 'dashboard', actionType: 'url', url: 'dashboard.html', level: 'primary'}},
+    ]
+  })
+</script>
+</body>
+</html>
